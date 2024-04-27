@@ -108,7 +108,7 @@ header.masthead,header.masthead:before {
                     <div class="row">
                 <?php
                 $fpath = 'admin/assets/uploads';
-                $alumni = $conn->query("SELECT a.*,c.course,Concat(a.firstname,' ',a.middlename,' ',a.lastname) as name from alumnus_bio a inner join courses c on c.id = a.course_id and a.id != 0 order by Concat(a.firstname,' ',a.middlename,' ',a.lastname) asc");
+                $alumni = $conn->query("SELECT a.*,c.course,Concat(a.firstname,' ',a.middlename,' ',a.lastname) as name from alumnus_bio a inner join courses c on c.id = a.course_id order by Concat(a.firstname,' ',a.middlename,' ',a.lastname) asc");
                 while($row = $alumni->fetch_assoc()):
                 ?>
                 <div class="col-md-4 item">
